@@ -21,4 +21,4 @@
 terraform.rc
 
 .terraform.lock.hcl
-**/.terraform.lock.hcl
+applications/.terraform.lock.hcl
