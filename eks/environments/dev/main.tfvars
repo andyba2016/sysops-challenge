@@ -1,10 +1,7 @@
 # main.tfvars
 
 cluster_name = "eks-cluster-dev"
-# vpc_id                  = "eks-vpc-dev"
-# subnet_ids              = ["eks-private-subnet-dev", "eks-public-subnet-dev"]
-# endpoint_private_access = false
-# endpoint_public_access  = true
+
 desired_capacity = 1
 min_capacity     = 1
 max_capacity     = 3
