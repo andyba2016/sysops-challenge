@@ -18,4 +18,4 @@ echo "Planning workspace ${environment}..." &&
 terraform init &&
 terraform workspace select -or-create ${environment} && 
 terraform plan -var-file=environments/${environment}/main.tfvars &&
-cd .. &&
+cd ..
