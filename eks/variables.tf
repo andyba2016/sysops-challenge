@@ -5,11 +5,6 @@ variable "cluster_name" {
   type        = string
 }
 
-variable "subnet_ids" {
-  description = "List of subnet IDs for the EKS cluster"
-  type        = list(string)
-}
-
 
 variable "endpoint_private_access" {
   description = "Indicates whether or not the EKS cluster's Kubernetes API server endpoint is private"
@@ -53,23 +48,28 @@ variable "k8s_version" {
   default     = "1.27"
 }
 
-variable "vpc_id" {
-  description = "ID of the VPC to link the EKS cluster"
+
+variable "vpc_cidr_block" {
+  description = "CIDR block for the VPC"
   type        = string
 }
 
-# variable "argocd_instance_name" {
-#   description = "Name of the ArgoCD instance"
-#   type        = string
-# }
+variable "subnet1_cidr_block" {
+  description = "CIDR block for subnet 1"
+  type        = string
+}
 
-# variable "api_app_name" {
-#   description = "Name of the API application"
-#   type        = string
-# }
+variable "subnet1_availability_zone" {
+  description = "Availability Zone for subnet 1"
+  type        = string
+}
 
-# variable "statics_app_name" {
-#   description = "Name of the statics application"
-#   type        = string
-# }
+variable "subnet2_cidr_block" {
+  description = "CIDR block for subnet 2"
+  type        = string
+}
 
+variable "subnet2_availability_zone" {
+  description = "Availability Zone for subnet 2"
+  type        = string
+}

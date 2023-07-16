@@ -3,10 +3,6 @@ output "cluster_name" {
   value       = var.cluster_name
 }
 
-output "subnet_1" {
-  value = aws_subnet.public_subnet.id
-}
-
-output "subnet_2" {
-  value = aws_subnet.public_subnet_2.id
+output "cluster" {
+  value = aws_eks_cluster.main_cluster.id
 }

@@ -9,10 +9,7 @@ variable "aws_region" {
   default     = "us-west-2"
 }
 
-variable "subnet_ids" {
-  description = "List of subnet IDs for the EKS cluster"
-  type        = list(string)
-}
+
 
 
 variable "endpoint_private_access" {
@@ -57,13 +54,20 @@ variable "k8s_version" {
   default     = "1.27"
 }
 
-variable "vpc_id" {
-  description = "ID of the VPC to link the EKS cluster"
-  type        = string
-}
 
 variable "region" {
   description = "AWS Region"
   type        = string
   default     = "us-west-2"
+}
+
+variable "vpc" {
+  description = "VPC configuration"
+  type = object({
+    cidr_block = string
+    subnets = map(object({
+      cidr_block        = string
+      availability_zone = string
+    }))
+  })
 }

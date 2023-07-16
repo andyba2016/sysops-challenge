@@ -1,5 +1,5 @@
 resource "aws_iam_role" "eks_cluster_role" {
-  name = "eks-node-group-example"
+  name = "${terraform.workspace}-eks-node-group"
 
   assume_role_policy = jsonencode({
     Statement = [
@@ -32,7 +32,7 @@ resource "aws_iam_role_policy_attachment" "AmazonEC2ContainerRegistryReadOnly" {
 
 
 resource "aws_iam_role" "cluster_role" {
-  name = "eks-cluster-demo"
+  name = "${terraform.workspace}-eks-cluster"
 
   assume_role_policy = <<POLICY
 {

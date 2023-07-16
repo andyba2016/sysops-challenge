@@ -18,12 +18,12 @@ data "aws_iam_policy_document" "aws_load_balancer_controller_assume_role_policy"
 
 resource "aws_iam_role" "aws_load_balancer_controller" {
   assume_role_policy = data.aws_iam_policy_document.aws_load_balancer_controller_assume_role_policy.json
-  name               = "aws-load-balancer-controller"
+  name               = "${terraform.workspace}-aws-load-balancer-controller"
 }
 
 resource "aws_iam_policy" "aws_load_balancer_controller" {
   policy = file("./modules/eks/policies/AWSLoadBalancerController.json")
-  name   = "AWSLoadBalancerController"
+  name   = "${terraform.workspace}-AWSLoadBalancerController"
 }
 
 resource "aws_iam_role_policy_attachment" "aws_load_balancer_controller_attach" {
