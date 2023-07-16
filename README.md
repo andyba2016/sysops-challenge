@@ -37,7 +37,7 @@ The directory structure for this project is as follows:
   - `environments`: This directory contains separate directories for each environment (production, stage, dev).
 
   - Inside each environment directory, there are `.tfvars` files specific to that environment, which provide values for the variables declared in `variables.tf`.
-  - `backend.tfvars` files define the backend configuration for each environment.
+  - `main.tfvars` files define the main configuration for each environment.
 
 Usage
 -----
