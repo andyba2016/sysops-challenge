@@ -50,9 +50,9 @@ Automatic apply & destroy:
 
 IMPORTANT: The following scripts use -auto-approve Caution: Scripts use "-auto-approve". It automatically approves changes. Review carefully before running. Test and verify changes to avoid risks.
 
-1. Run `chmox +x` and `plan.sh` to check the plan changes.
-2. Run `chmox +x` and `create.sh` and choose the environment you want to create. It will deploy the EKS Cluster and deploy the Argo CD instance and applications.
-3. Run `chmox +x` and `destroy.sh` and choose the environment you want to destroy.
+1. Run `chmod +x` and `plan.sh` to check the plan changes.
+2. Run `chmod +x` and `create.sh` and choose the environment you want to create. It will deploy the EKS Cluster and deploy the Argo CD instance and applications.
+3. Run `chmod +x` and `destroy.sh` and choose the environment you want to destroy.
 
 If you prefer to execute it manually, please check `create.sh` and respect the execution order (eks, argocd, applications).
 
